@@ -34,7 +34,7 @@ const newTheme = createMuiTheme({
                 color: grey[50]
             },
             subtitle2: {
-                fontSize: "1.5rem",
+                fontSize: "16px",
                 marginLeft: "5rem",
 
             },

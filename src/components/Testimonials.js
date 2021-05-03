@@ -4,16 +4,12 @@ import newTheme from "../styles/Theme";
 
 const useStyles = makeStyles((theme) => ({
     section: {
-        minHeight: "100vh"
-    },
-    secdark: {
+        minHeight: "100vh",
         background: "#fff",
         color: "#FD5858"
-    },
-    sectioncontent: {
-
 
     },
+
     container:{
 
         display: "flex",
@@ -62,116 +58,7 @@ export default function Testimonials({title, dark, id}) {
     return (
         <div className={`${classes.section} ${dark && classes.secdark}`}>
             <div className={classes.sectioncontent} id={id}>
-                <Grid container className={classes.container}>
-                    <Grid className={classes.info}>
-                        <Typography variant={"h2"} color="primary"> Testimonials</Typography>
-                        <Typography variant={"body1"}>These are comments of what people think about me and how as a
-                            person I can bring value to any project that I participate in areas like leadership, team
-                            management and more.</Typography>
-                    </Grid>
-                    <Grid className={classes.comments}>
-                        <Paper className={classes.paper}>
-                            <Grid container spacing={2}>
-                                <Grid item>
-                                    <ButtonBase className={classes.image}>
-                                        <img className={classes.img}
-                                             src={face1} alt="img as face1"/>
-                                    </ButtonBase>
-                                </Grid>
-                                <Grid item xs={12} sm container>
-                                    <Grid item xs container direction="column" spacing={2}>
-                                        <Grid item xs>
-                                            <Typography variant="h5" gutterBottom>
-                                                Guy Hawkins
-                                            </Typography>
-                                            <Typography variant="body1" color="textSecondary">
-                                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                                                sint. Velit officia consequat duis enim velit mollit. Exercitation
-                                                veniam consequat sunt nostrud amet.
-                                            </Typography>
-                                        </Grid>
 
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                        </Paper>
-                        <Paper className={classes.paper}>
-                            <Grid container spacing={2}>
-                                <Grid item>
-                                    <ButtonBase className={classes.image}>
-                                        <img className={classes.img}
-                                             src={face1} alt="img as face1"/>
-                                    </ButtonBase>
-                                </Grid>
-                                <Grid item xs={12} sm container>
-                                    <Grid item xs container direction="column" spacing={2}>
-                                        <Grid item xs>
-                                            <Typography variant="h5" gutterBottom>
-                                                Guy Hawkins
-                                            </Typography>
-                                            <Typography variant="body1" color="textSecondary">
-                                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                                                sint. Velit officia consequat duis enim velit mollit. Exercitation
-                                                veniam consequat sunt nostrud amet.
-                                            </Typography>
-                                        </Grid>
-
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                        </Paper>
-                        <Paper className={classes.paper}>
-                            <Grid container spacing={2}>
-                                <Grid item>
-                                    <ButtonBase className={classes.image}>
-                                        <img className={classes.img}
-                                             src={face1} alt="img as face1"/>
-                                    </ButtonBase>
-                                </Grid>
-                                <Grid item xs={12} sm container>
-                                    <Grid item xs container direction="column" spacing={2}>
-                                        <Grid item xs>
-                                            <Typography variant="h5" gutterBottom>
-                                                Guy Hawkins
-                                            </Typography>
-                                            <Typography variant="body1" color="textSecondary">
-                                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                                                sint. Velit officia consequat duis enim velit mollit. Exercitation
-                                                veniam consequat sunt nostrud amet.
-                                            </Typography>
-                                        </Grid>
-
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                        </Paper>
-                        <Paper className={classes.paper}>
-                            <Grid container spacing={2}>
-                                <Grid item>
-                                    <ButtonBase className={classes.image}>
-                                        <img className={classes.img}
-                                             src={face1} alt="img as face1"/>
-                                    </ButtonBase>
-                                </Grid>
-                                <Grid item xs={12} sm container>
-                                    <Grid item xs container direction="column" spacing={2}>
-                                        <Grid item xs>
-                                            <Typography variant="h5" gutterBottom>
-                                                Guy Hawkins
-                                            </Typography>
-                                            <Typography variant="body1" color="textSecondary">
-                                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                                                sint. Velit officia consequat duis enim velit mollit. Exercitation
-                                                veniam consequat sunt nostrud amet.
-                                            </Typography>
-                                        </Grid>
-
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                        </Paper>
-                    </Grid>
-                </Grid>
             </div>
         </div>
     )

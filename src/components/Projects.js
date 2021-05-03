@@ -1,12 +1,7 @@
-import {Card, CardContent, Grid, makeStyles, Typography,} from "@material-ui/core";
+import {makeStyles, Typography,} from "@material-ui/core";
 import newTheme from "../styles/Theme";
 import LaunchIcon from '@material-ui/icons/Launch';
-import javaDark from "../images/iconsjavablack.png";
-import sqlDark from "../images/iconssqlblack.png";
-import ionicDark from "../images/iconsionicblack.png";
-import reactDark from "../images/iconsreactblack.png";
-import mongoDark from "../images/iconsmongoblack.png";
-import mongoLight from "../images/iconsmongolight.png";
+
 
 const useStyles = makeStyles((theme) => ({
     section: {
@@ -17,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
         background: newTheme.palette.secondary.dark,
     },
     principal: {
-        outline: "1px solid red",
         display: "flex",
         width: "90rem",
         height: "60rem",
@@ -26,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center"
     },
     block: {
-        outline: "1px solid red",
         width: "85rem",
         height: "50rem",
         display: "flex",
@@ -35,16 +28,18 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "space-evenly"
     },
     info: {
-        outline: "1px solid red",
         width: "41rem",
-        height: "8.5rem",
+        height: "15rem",
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        justifyContent: "space-between"
+    },
+    resume: {
+        color: newTheme.palette.secondary.contrastText
     },
     board: {
         display: "flex",
         alignSelf: "center",
-        outline: "1px solid red",
         width: "85rem",
         height: "40rem",
         justifyContent: "center",
@@ -53,32 +48,46 @@ const useStyles = makeStyles((theme) => ({
     projects: {
         display: "flex",
         flexWrap: "wrap",
-        outline: "1px solid red",
-        width: "80rem",
-        height: "30rem"
+        height: "28rem",
+        width: "70rem",
+        justifyContent: "space-evenly",
+        alignItems: "center",
+
     },
     projectitem: {
-        outline: "1px solid red",
         width: "20rem",
         height: "11rem",
         borderRadius: "5px",
-        background: "#fff"
+        background: "#fff",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-evenly",
+        margin: " 15px"
     },
     itemTitle: {
-        display:"flex",
-        outline: "1px solid red",
-        "& h6":{
-            marginLeft:0
+        display: "flex",
+        justifyContent: "space-between",
+        width: "18rem",
+        alignSelf: "center",
+        "& h6": {
+            marginLeft: 0
         }
     },
-    linkSection:{
-        outline: "1px solid red",
-        width:"6rem"
+    linkSection: {
+        display: "flex",
+        width: "6.79rem",
+        alignItems: "center",
+        justifyContent: "center",
+        cursor: "pointer"
     },
     itemBody: {
-        outline: "1px solid red",
-        "& p":{
-            marginLeft:0
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-around",
+        alignSelf: "center",
+        width: "18rem",
+        "& p": {
+            marginLeft: 0
         }
     }
 
@@ -113,7 +122,98 @@ export default function Projects({title, dark, id}) {
                                     <div className={classes.itemTitle}>
                                         <Typography variant={"subtitle2"}>MERN STACK APP</Typography>
                                         <div className={classes.linkSection}>
-
+                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}></LaunchIcon>
+                                            <Typography variant={"caption"}>Source code</Typography>
+                                        </div>
+                                    </div>
+                                    <div className={classes.itemBody}>
+                                        <Typography variant={"caption"}>
+                                            Angular, Nodejs, HTML, CSS
+                                        </Typography>
+                                        <Typography variant={"body1"} color={"grey[50]"}>
+                                            Development of a TODO app with a Backend service hosted in heroku for
+                                            something.
+                                        </Typography>
+                                    </div>
+                                </div>
+                                <div className={classes.projectitem}>
+                                    <div className={classes.itemTitle}>
+                                        <Typography variant={"subtitle2"}>MERN STACK APP</Typography>
+                                        <div className={classes.linkSection}>
+                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}></LaunchIcon>
+                                            <Typography variant={"caption"}>Source code</Typography>
+                                        </div>
+                                    </div>
+                                    <div className={classes.itemBody}>
+                                        <Typography variant={"caption"}>
+                                            Angular, Nodejs, HTML, CSS
+                                        </Typography>
+                                        <Typography variant={"body1"} color={"grey[50]"}>
+                                            Development of a TODO app with a Backend service hosted in heroku for
+                                            something.
+                                        </Typography>
+                                    </div>
+                                </div>
+                                <div className={classes.projectitem}>
+                                    <div className={classes.itemTitle}>
+                                        <Typography variant={"subtitle2"}>MERN STACK APP</Typography>
+                                        <div className={classes.linkSection}>
+                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}></LaunchIcon>
+                                            <Typography variant={"caption"}>Source code</Typography>
+                                        </div>
+                                    </div>
+                                    <div className={classes.itemBody}>
+                                        <Typography variant={"caption"}>
+                                            Angular, Nodejs, HTML, CSS
+                                        </Typography>
+                                        <Typography variant={"body1"} color={"grey[50]"}>
+                                            Development of a TODO app with a Backend service hosted in heroku for
+                                            something.
+                                        </Typography>
+                                    </div>
+                                </div>
+                                <div className={classes.projectitem}>
+                                    <div className={classes.itemTitle}>
+                                        <Typography variant={"subtitle2"}>MERN STACK APP</Typography>
+                                        <div className={classes.linkSection}>
+                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}></LaunchIcon>
+                                            <Typography variant={"caption"}>Source code</Typography>
+                                        </div>
+                                    </div>
+                                    <div className={classes.itemBody}>
+                                        <Typography variant={"caption"}>
+                                            Angular, Nodejs, HTML, CSS
+                                        </Typography>
+                                        <Typography variant={"body1"} color={"grey[50]"}>
+                                            Development of a TODO app with a Backend service hosted in heroku for
+                                            something.
+                                        </Typography>
+                                    </div>
+                                </div>
+                                <div className={classes.projectitem}>
+                                    <div className={classes.itemTitle}>
+                                        <Typography variant={"subtitle2"}>MERN STACK APP</Typography>
+                                        <div className={classes.linkSection}>
+                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}></LaunchIcon>
+                                            <Typography variant={"caption"}>Source code</Typography>
+                                        </div>
+                                    </div>
+                                    <div className={classes.itemBody}>
+                                        <Typography variant={"caption"}>
+                                            Angular, Nodejs, HTML, CSS
+                                        </Typography>
+                                        <Typography variant={"body1"} color={"grey[50]"}>
+                                            Development of a TODO app with a Backend service hosted in heroku for
+                                            something.
+                                        </Typography>
+                                    </div>
+                                </div>
+                                <div className={classes.projectitem}>
+                                    <div className={classes.itemTitle}>
+                                        <Typography variant={"subtitle2"}>MERN STACK APP</Typography>
+                                        <div className={classes.linkSection}>
+                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}></LaunchIcon>
+                                            <Typography variant={"caption"}>Source code</Typography>
                                         </div>
                                     </div>
                                     <div className={classes.itemBody}>
