@@ -89,7 +89,8 @@ const useStyles = makeStyles((theme) => ({
     picture: {
         display: "flex",
         justifyContent: "center",
-        width: "47rem"
+        width: "47rem",
+        opacity:"10%"
     }
 }))
 export default function Knowledge({title, dark, id}) {

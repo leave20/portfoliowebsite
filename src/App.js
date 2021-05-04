@@ -24,6 +24,7 @@ function App() {
             <Testimonials title="testimonials" id="testimonials" dark={true}/>
             <Letsworktogether title="letsworktogether" id="letsworktogether" dark={true}/>
             <Footer dark={true}/>
+            <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
         </div>
     );
 }

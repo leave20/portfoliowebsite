@@ -1,7 +1,7 @@
 import {Grid, makeStyles, Typography} from "@material-ui/core";
 import newTheme from "../styles/Theme";
 import logo from "../images/LogoBlanco.svg"
-import photo from "../images/photo.jpg"
+import photo from "../images/photo.png"
 
 const useStyles = makeStyles((theme) => ({
     section: {
@@ -55,6 +55,10 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "center",
         width: "47rem",
+        background:`url(${photo})`,
+        backgroundSize:"35rem",
+        backgroundRepeat:"no-repeat",
+        backgroundPosition:"top",
         "& img": {
             width: "25rem"
         }
@@ -98,7 +102,7 @@ export default function Aboutme({title, dark, id}) {
 
                         </div>
                         <div className={classes.picture}>
-                            <img src={photo} alt=""/>
+                            {/*<img src={photo} alt=""/>*/}
                         </div>
                     </div>
                 </div>
