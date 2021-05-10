@@ -1,6 +1,6 @@
 import { makeStyles} from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     section: {
         height:"135px"
     },
@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-export default function Footer({title,dark,id}){
+export default function Footer({dark,id}){
     const classes=useStyles()
     return(
         <div className={`${classes.section} ${dark && classes.secdark}`}>

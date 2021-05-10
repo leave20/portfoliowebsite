@@ -1,10 +1,6 @@
 import {createMuiTheme} from "@material-ui/core";
 import {grey} from "@material-ui/core/colors";
 
-
-
-
-
 const newTheme = createMuiTheme({
         palette: {
             primary: {

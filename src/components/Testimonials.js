@@ -1,9 +1,7 @@
-import {ButtonBase, Grid, makeStyles, Paper, Typography} from "@material-ui/core";
-import face1 from '../images/face1.jpg'
+import {makeStyles,Typography} from "@material-ui/core";
 import newTheme from "../styles/Theme";
-import LaunchIcon from "@material-ui/icons/Launch";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     section: {
         minHeight: "100vh",
         background: "#fff",
@@ -14,12 +12,15 @@ const useStyles = makeStyles((theme) => ({
 
     },
     principal: {
-        display: "flex",
-        width: "90rem",
-        height: "60rem",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center"
+        display:"none",
+        [newTheme.breakpoints.up("xl")]: {
+            display: "flex",
+            width: "90rem",
+            height: "60rem",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center"
+        }
     },
     block: {
         width: "85rem",
@@ -39,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     resume: {
         color: newTheme.palette.primary.dark
     },
-    board:{
+    board: {
         display: "flex",
         alignSelf: "center",
         width: "85rem",
@@ -74,10 +75,9 @@ export default function Testimonials({title, dark, id}) {
                         </div>
                         <div className={classes.board}>
                             <a className="twitter-timeline" data-lang="en"
-                               href="https://twitter.com/TwitterDev/lists/national-parks?ref_src=twsrc%5Etfw">Ver mas</a>
-
+                               href="https://twitter.com/TwitterDev/lists/national-parks?ref_src=twsrc%5Etfw">Ver
+                                mas</a>
                         </div>
-
                     </div>
                 </div>
             </div>

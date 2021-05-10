@@ -138,7 +138,7 @@ const useStyles = makeStyles((theme) => ({
     }
 
 }))
-export default function Navbar({title, dark, id}) {
+export default function Navbar() {
     const classes = useStyles()
     const [open, setOpen] = useState(false)
     return (

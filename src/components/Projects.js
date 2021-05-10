@@ -3,7 +3,7 @@ import newTheme from "../styles/Theme";
 import LaunchIcon from '@material-ui/icons/Launch';
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     section: {
         minHeight: "100vh",
         display: "flex",
@@ -12,12 +12,15 @@ const useStyles = makeStyles((theme) => ({
         background: newTheme.palette.secondary.dark,
     },
     principal: {
-        display: "flex",
-        width: "90rem",
-        height: "60rem",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center"
+        display:"none",
+        [newTheme.breakpoints.up("xl")]: {
+            display: "flex",
+            width: "90rem",
+            height: "60rem",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center"
+        },
     },
     block: {
         width: "85rem",
@@ -122,7 +125,7 @@ export default function Projects({title, dark, id}) {
                                     <div className={classes.itemTitle}>
                                         <Typography variant={"subtitle2"}>MERN STACK APP</Typography>
                                         <div className={classes.linkSection}>
-                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}></LaunchIcon>
+                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}/>
                                             <Typography variant={"caption"}>Source code</Typography>
                                         </div>
                                     </div>
@@ -140,7 +143,7 @@ export default function Projects({title, dark, id}) {
                                     <div className={classes.itemTitle}>
                                         <Typography variant={"subtitle2"}>MERN STACK APP</Typography>
                                         <div className={classes.linkSection}>
-                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}></LaunchIcon>
+                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}/>
                                             <Typography variant={"caption"}>Source code</Typography>
                                         </div>
                                     </div>
@@ -158,7 +161,7 @@ export default function Projects({title, dark, id}) {
                                     <div className={classes.itemTitle}>
                                         <Typography variant={"subtitle2"}>MERN STACK APP</Typography>
                                         <div className={classes.linkSection}>
-                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}></LaunchIcon>
+                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}/>
                                             <Typography variant={"caption"}>Source code</Typography>
                                         </div>
                                     </div>
@@ -176,7 +179,7 @@ export default function Projects({title, dark, id}) {
                                     <div className={classes.itemTitle}>
                                         <Typography variant={"subtitle2"}>MERN STACK APP</Typography>
                                         <div className={classes.linkSection}>
-                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}></LaunchIcon>
+                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}/>
                                             <Typography variant={"caption"}>Source code</Typography>
                                         </div>
                                     </div>
@@ -194,7 +197,7 @@ export default function Projects({title, dark, id}) {
                                     <div className={classes.itemTitle}>
                                         <Typography variant={"subtitle2"}>MERN STACK APP</Typography>
                                         <div className={classes.linkSection}>
-                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}></LaunchIcon>
+                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}/>
                                             <Typography variant={"caption"}>Source code</Typography>
                                         </div>
                                     </div>
@@ -212,7 +215,7 @@ export default function Projects({title, dark, id}) {
                                     <div className={classes.itemTitle}>
                                         <Typography variant={"subtitle2"}>MERN STACK APP</Typography>
                                         <div className={classes.linkSection}>
-                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}></LaunchIcon>
+                                            <LaunchIcon className={classes.launchIcon} fontSize={"small"}/>
                                             <Typography variant={"caption"}>Source code</Typography>
                                         </div>
                                     </div>

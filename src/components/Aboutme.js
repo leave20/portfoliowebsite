@@ -1,9 +1,9 @@
-import {Grid, makeStyles, Typography} from "@material-ui/core";
+import { makeStyles, Typography} from "@material-ui/core";
 import newTheme from "../styles/Theme";
 import logo from "../images/LogoBlanco.svg"
 import photo from "../images/photo.png"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     section: {
         display: "flex",
         minHeight: "100vh",
@@ -13,18 +13,30 @@ const useStyles = makeStyles((theme) => ({
 
     },
     principal: {
-        display: "flex",
-        width: "90rem",
-        height: "60rem",
-        background: `url(${logo})`,
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        backgroundSize: "40rem",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center"
+        display: "none",
+        [newTheme.breakpoints.up("xl")]: {
+            display: "flex",
+            width: "90rem",
+            height: "60rem",
+            background: `url(${logo})`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "40rem",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center"
+        },
+        [newTheme.breakpoints.down("lg")]: {
+            display: "flex",
+            flexDirection:"column"
+        }
     },
     block: {
+        [newTheme.breakpoints.down("lg")]: {
+            width: "50vh",
+            justifyContent: "center",
+            alignItems: "center",
+        },
         width: "85rem",
         height: "50rem",
         background: newTheme.palette.primary.dark,
@@ -32,6 +44,12 @@ const useStyles = makeStyles((theme) => ({
         display: "flex"
     },
     info: {
+        [newTheme.breakpoints.down("lg")]: {
+            width: "auto",
+            textAlign: "center",
+            justifyContent:"center",
+            alignItems:"center"
+        },
         width: "38rem",
         height: "50rem",
         display: "flex",
@@ -40,25 +58,37 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         width: "15rem",
-        height: "5rem"
+        height: "5rem",
     },
     resume: {
+        [newTheme.breakpoints.down("lg")]: {
+            width:"auto"
+        },
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-around",
         width: "38rem",
         height: "40rem",
-        color: newTheme.palette.secondary.contrastText
+        color: newTheme.palette.secondary.contrastText,
+        "& h3,h6,p":{
+            [newTheme.breakpoints.down("lg")]: {
+                marginLeft:0,
+                width:"auto"
+            },
+        }
     },
     picture: {
+        [newTheme.breakpoints.down("lg")]: {
+            display: "none"
+        },
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         width: "47rem",
-        background:`url(${photo})`,
-        backgroundSize:"35rem",
-        backgroundRepeat:"no-repeat",
-        backgroundPosition:"top",
+        background: `url(${photo})`,
+        backgroundSize: "35rem",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "top",
         "& img": {
             width: "25rem"
         }

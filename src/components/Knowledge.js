@@ -1,4 +1,4 @@
-import {Grid, makeStyles, Typography} from "@material-ui/core";
+import {makeStyles, Typography} from "@material-ui/core";
 import logo from '../images/logo.svg'
 import newTheme from "../styles/Theme"
 import mongoLight from "../images/iconsmongolight.png"
@@ -9,7 +9,7 @@ import reactDark from "../images/iconsreactblack.png"
 import mongoDark from "../images/iconsmongoblack.png"
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     section: {
         display: "flex",
         minHeight: "100vh",
@@ -18,15 +18,18 @@ const useStyles = makeStyles((theme) => ({
         background: newTheme.palette.secondary.contrastText
     },
     principal: {
-        display: "flex",
-        width: "90rem",
-        height: "60rem",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "right",
-        backgroundSize: "38rem",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center"
+        display:"none",
+        [newTheme.breakpoints.up("xl")]: {
+            display: "flex",
+            width: "90rem",
+            height: "60rem",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "right",
+            backgroundSize: "38rem",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center"
+        },
     },
 
     block: {
