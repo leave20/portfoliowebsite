@@ -16,7 +16,7 @@ const newTheme = createMuiTheme({
         },
         typography: {
             h1: {
-                margin: " 0 auto",
+
                 fontSize: "2.5rem",
                 fontWeight: "bold"
             },
@@ -31,11 +31,9 @@ const newTheme = createMuiTheme({
             },
             subtitle2: {
                 fontSize: "16px",
-                marginLeft: "5rem",
 
             },
             body1: {
-                marginLeft: "5rem",
                 fontWeight: "normal",
 
             }

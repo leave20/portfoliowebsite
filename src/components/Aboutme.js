@@ -119,7 +119,7 @@ export default function Aboutme({title, dark, id}) {
                                 </div>
                                 <div>
                                     <Typography variant={"h3"}>EXPERIENCE</Typography>
-                                    <Typography variant={"subtitle2"}>Software Developer Intern - EMPRESA #1
+                                    <Typography variant={"subtitle2"}>Software Developer Intern - Stackly Code
                                     </Typography>
                                     <Typography variant={"body1"} color={"grey[50]"}>
                                         Assist the lead developers of the project in the software design process.

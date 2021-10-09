@@ -1,4 +1,4 @@
-import { makeStyles, Typography} from "@material-ui/core";
+import {makeStyles, Typography} from "@material-ui/core";
 import logo from "../images/LogoBlanco.svg";
 import newTheme from "../styles/Theme";
 
@@ -6,67 +6,84 @@ import newTheme from "../styles/Theme";
 const useStyles = makeStyles(() => {
     return ({
         section: {
+            background: newTheme.palette.secondary.dark,
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            minHeight: "100vh",
-            background: newTheme.palette.secondary.dark,
-            color: newTheme.palette.secondary.contrastText
+            minHeight: "80vh",
         },
         principal: {
-            display: "none",
-            [newTheme.breakpoints.up("xl")]: {
-                display: "flex",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            [newTheme.breakpoints.up('md')]: {
+                display: 'flex',
                 background: `url(${logo})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "40%",
+                backgroundPosition: 'left',
+            },
+            [newTheme.breakpoints.down('sm')]: {
+
                 width: "80rem",
                 height: "50rem",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "40rem",
-            },
-            [newTheme.breakpoints.down("lg")]: {
-                display: "flex",
             }
         },
         block: {
-            [newTheme.breakpoints.down("lg")]: {
-                display: "none"
-            },
             display: "flex",
-            background: newTheme.palette.secondary.dark,
-            width: "40rem",
-            height: "50rem",
-            opacity: "98.5%",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "flex-end",
-            "& img": {
-                width: "15rem",
-                marginRight: "5rem"
+            [newTheme.breakpoints.up('md')]: {
+                background: newTheme.palette.secondary.dark,
+                width: "50%",
+                height: "50rem",
+                opacity: "95%",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: 'flex-end',
+                "& img": {
+                    width: "15rem",
+                    marginRight: "5rem"
+                },
+            },
+            [newTheme.breakpoints.down('sm')]: {
+                display: "flex",
+                position: "absolute",
+                "& img": {
+                    width: "60vw",
+                    height: "60vh"
+                },
+                opacity: "0.1"
             }
         },
         info: {
-            [newTheme.breakpoints.down("lg")]: {
-                textAlign: "center"
-            },
             display: "flex",
+            alignItems: "center",
             flexDirection: "column",
             justifyContent: "center",
-            "& h1": {
-                margin: "0 auto",
-                width: "25rem"
+            textAlign: "center",
+            color: newTheme.palette.primary.contrastText,
+            [newTheme.breakpoints.up('md')]: {
+                textAlign: 'start',
+                alignItems: 'flex-start',
+                width: "50%",
+                height: "50rem",
+                "& p": {
+                    width: '70%'
+                }
             },
-            "& p": {
-                margin: "0 auto",
-                width: "25rem"
+            [newTheme.breakpoints.down('sm')]: {
+                width: "80%",
+                position: "relative",
+                justifyContent: "center",
+
             }
         }
 
     });
 })
-export default function Paste({dark}) {
+export default function Paste() {
     const classes = useStyles()
     return (
-        <div className={`${classes.section} ${dark && classes.secdark}`}>
+        <div className={`${classes.section}`}>
             <div className={classes.principal}>
                 <div className={classes.block}>
                     <img src={logo} alt=""/>
@@ -75,6 +92,7 @@ export default function Paste({dark}) {
                     <Typography variant={"h1"}>CRAIG KEM CASTRO PAIRAZAMAN</Typography>
                     <Typography variant={"body1"}>Software developer that specialize in the analysis, development and
                         design of websites, applications and business systems.</Typography>
+
                 </div>
             </div>
         </div>
